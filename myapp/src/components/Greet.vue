@@ -1,7 +1,7 @@
 <template>
   <div>
     <div style="display: flex; justify-content: center;">
-      <img src="./FunctionCardIconPNG.png" alt="" style="width:60% ;height: auto;opacity: 0.1;position:absolute;z-index:-10;">
+      <img src="./FunctionCardIconPNG.png" alt="" style="width:30% ;height: auto;opacity: 0.1;position:absolute;z-index:-10;margin-left: 100px;">
     </div>
     
     路径选择：
