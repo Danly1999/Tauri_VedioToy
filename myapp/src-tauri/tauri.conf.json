@@ -1,0 +1,55 @@
+{
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "VedioToy",
+    "version": "0.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "dialog": {
+        "all": true
+      },
+      "fs":{
+        "readFile": true,
+        "writeFile": true,
+        "readDir": true,
+        "createDir": true,
+        "exists": true,
+        "scope": ["$DOCUMENT/**", "$DOCUMENT/*", "$DOCUMENT"]
+      },
+      "all": false,
+      "shell": {
+        "sidecar": true,
+        "all": false,
+        "open": true,
+        "scope": [{ "name": "bin/ffmpeg", "args": true, "sidecar": true }]
+      }
+    },
+    "windows": [
+      {
+        "title": "VedioToy",
+        "width": 480,
+        "height": 200,
+        "center": true
+      }
+    ],
+    "security": {
+      "csp": null
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "com.tauri.VedioToy",
+      "externalBin": ["bin/ffmpeg"],
+      "icon": [
+        "icons/icon.ico"
+      ]
+    }
+    
+  }
+}
